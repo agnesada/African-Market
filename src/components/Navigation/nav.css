@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&display=swap");
+
+.logo {
+  font-size: 20px;
+  /* padding: 0 !important; */
+}
+
+/* .navPadding{
+    padding: 0 !important;
+} */
+
+.sticky{
+    position: fixed;
+    top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.dropdownText {
+  color: #101828;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#collasible-nav-dropdown{
+  color: #f9fafb ;
+}
+
+.navstyle {
+  background-color: #08080a;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.navText {
+  color: #f9fafb !important;
+  font-size: 16px;
+  font-weight: 400 !important;
+}
+
+.active{
+    color: #0ba5ec !important;
+  font-weight: 700 !important;
+
+}
+
+.navigationbtns{
+    align-self: center;
+    align-self: center;
+}
+
+.search{
+    padding: 4px !important;
+    max-height: 50px !important;
+    padding: 12px !important;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(234, 236, 240, 1) !important;
+    background: rgba(255, 255, 255, 0.08)!important;
+    background-clip: padding-box;
+    border: 1px solid rgba(208, 213, 221, 1) !important;
+    border-radius: 0.25rem;
+}
+
+.onboarding{
+    justify-self: end;
+}
+
+.signUp {
+  background-color: #0ba5ec;
+  border-radius: 8px;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+  font-size: 16px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px),
+  only screen and (max-width: 767px) {
+  .signUp {
+    text-align: center;
+  }
+
+  .login {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    margin-bottom: 18px;
+  }
+}

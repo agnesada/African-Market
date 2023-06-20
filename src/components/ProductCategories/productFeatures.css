@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&display=swap");
+
+.productCard{
+    margin-top: 42px;
+}
+
+.featuredHearder{
+    color: #101828;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.cardImg {
+  border-radius: 8px;
+  height: 70%;
+  left: 50%;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  width: 70%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: filter 400ms ease 0s, opacity 400ms ease 0s,
+    transform 500ms ease 0s !important;
+}
+
+.imgDiv {
+  border-radius: 8px;
+  position: relative;
+  height: 0px;
+  padding-top: 100%;
+  overflow: hidden;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: rgb(245, 245, 245);
+}
+
+.product-item-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #101828;
+}
+
+.product-item-info {
+  padding-top: 20px;
+}
+
+.product-item-price {
+  font-size: 14px;
+  font-weight: 500;
+  color: #101828;
+}
+
+.product-item-review-icon {
+  color: #ff9923;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.single_add_to_cart_button:hover {
+  color: var(--btn-color-hover, #101828);
+  background-color: var(--btn-bgcolor-hover, #b9e6fe);
+}
+
+.single_add_to_cart_button {
+  background-color: white;
+  color: #101828;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid black;
+  border-color: #eaecf0;
+  font-weight: 600;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-top: 12px;
+}
+
+.viewAll {
+  background-color: #b9e6fe;
+  color: #101828;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.viewAll:hover {
+  color: var(--btn-color-hover, #0ba5ec);
+  background-color: var(--btn-bgcolor-hover, #b9e6fe);
+  border: none;
+}
+
+/* .margin-top {
+  margin-top: 60px;
+} */
+
+/* .imgGrid{
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr 1fr !important;
+    grid-template-rows: 1fr 1fr !important;
+    grid-gap: 20px;
+} */
+
+.content-area {
+  margin-bottom: 100px;
+}
