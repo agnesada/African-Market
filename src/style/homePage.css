@@ -50,6 +50,12 @@
   color: #101828;
 }
 
+.product-item-brand{
+  font-size: 16px;
+  font-weight: 500;
+  color: #101828;
+}
+
 .product-item-info {
   padding-top: 20px;
 }
@@ -119,3 +125,4 @@
 .content-area {
   margin-bottom: 100px;
 }
+

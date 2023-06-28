@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&display=swap");
+
+
+.react-horizontal-scrolling-menu--scroll-container {
+    display: flex;
+    height: max-content;
+    overflow-y: hidden;
+    position: relative;
+    width: 100%;
+    gap: 8px;
+    margin-top: 50px;
+  }
+  
+  .categories-scrolling-item{
+    font-size: 14px;
+    font-weight: 400;
+    color: #101828;
+    background-color: #F2F4F7;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+  }
+  
+  .aria-current{
+    background-color: #0ba5ec;
+    color: white;
+    /* width: max-content; */
+  }

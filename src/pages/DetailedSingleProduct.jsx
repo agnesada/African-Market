@@ -4,7 +4,7 @@ import { singleProduct } from "../store/gets/singleProductSlice";
 import { relatedProduct } from "../store/gets/relatedProductSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaStar, FaRegStar, FaStarHalfAlt } from "react-icons/fa";
 import "../style/detailedSingleProduct.css";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
@@ -28,9 +28,6 @@ const DetailedProduct = () => {
     data: relatedData,
   } = useSelector((state) => state.relatedProduct);
 
-  const newData =
-    relatedData &&
-    relatedData.filter((products) => products._id !== params.id).length > 0;
 
   useEffect(() => {
     dispatch(singleProduct(params.id));
@@ -85,8 +82,9 @@ const DetailedProduct = () => {
 
               <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6">
                 <h2 className="product-item-title mt-2">{sData?.name}</h2>
+                <h5 className="product-item-brand">{sData?.brand}</h5>
                 <h2 className="product-item-price">
-                  &#8358;{sData.price.toLocaleString()}
+                  &#8358;{sData?.price.toLocaleString()}
                 </h2>
                 <div className="product-description-div">
                   <h2 className="product-description-header mt-4">
@@ -185,15 +183,23 @@ const DetailedProduct = () => {
 
           {relatedLoading && <p>Loading...</p>}
           {relatedError && <p>error: {relatedError}</p>}
-
-          {newData ? (
-            <p className="similar-products-text">
-              Below are some of the related products
-            </p>
-          ) : (
-            // <img src="" alt="" />
-            <p className="similar-products-empty-state mt-5"></p>
-          )}
+          {relatedData && relatedData.length > 0 ?(
+            <>
+              {relatedData.map((products, i) =>(
+                <div>
+                  <Link to={`/products/${products._id}`} className="text-decoration-none">
+                    <div className="card shadow text-center">
+                      <img src={products.image[0]} alt={products.name} width={"100%"} />
+                    </div>
+                    <div className="card-body">
+                      <h2 className="text">{products.name}</h2>
+                      <h5>&#8358;{products.price}</h5>
+                    </div>
+                  </Link>
+                </div>
+              ))}
+            </>
+          ):( <p>No related products</p> ) }
         </div>
       </div>
     </div>

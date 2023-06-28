@@ -7,6 +7,7 @@ import relatedProducReducer from "./gets/relatedProductSlice";
 import loginReducer from "./auth/loginSlice";
 import registerReducer  from "./auth/signUpSlice";
 import newProductReducer  from "./gets/newProductSlice";
+import categoryReducer from "./gets/categorySlice";
 
 const reducer = {
 	fetchProduct: fetchProductReducer,
@@ -14,7 +15,8 @@ const reducer = {
 	relatedProduct: relatedProducReducer,
 	login: loginReducer,
 	register: registerReducer,
-	newProduct: newProductReducer
+	newProduct: newProductReducer,
+	category: categoryReducer
 
 };
 
@@ -25,5 +27,13 @@ const store = configureStore({
 	middleware,
 	devTools: process.env.NODE_ENV !== "production",
 });
+
+store.subscribe(() => {
+	const state = store.getState();
+	// localStorage.setItem('cartItems', JSON.stringify(state.cart.cartItems));
+  
+	localStorage.setItem('userInfo', JSON.stringify(state.login.data));
+  
+  });
 
 export default store;

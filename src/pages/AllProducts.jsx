@@ -5,6 +5,7 @@ import { fetchProduct } from "../store/gets/fetchProductSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { IoMdStarOutline, IoMdStar, IoMdStarHalf } from "react-icons/io";
+import CategoryComponent from "../components/CategorySection/CategoryComponent";
 
 const AllProducts = () => {
   const dispatch = useDispatch();
@@ -33,14 +34,7 @@ const AllProducts = () => {
               </h2>
             </div>
 
-            <div className="button-set">
-              <button>All</button>
-              <button>product1</button>
-              <button>product2</button>
-              <button>product3</button>
-              <button>product4</button>
-              <button>product5</button>
-            </div>
+            <CategoryComponent />
 
             <div className="row ">
               {ploading && <p>Loading...</p>}

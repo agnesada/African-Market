@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import NavHeader from "../components/Navigation/NavHeader";
 import HeroSection from "../components/HeroSection/Hero";
 import FeatureArea from "../components/HeroSection/feature";
-import "../style/homePage.css";
+import CategoryComponent from "../components/CategorySection/CategoryComponent"
+import "../style/homePage.css"; 
 import { fetchProduct } from "../store/gets/fetchProductSlice";
 // import { newProduct } from "../store/gets/newProductSlice";
 import { useDispatch, useSelector } from "react-redux";
@@ -45,7 +46,9 @@ const HomePage = () => {
     <div>
       <NavHeader />
       <HeroSection />
+      <CategoryComponent />
       <FeatureArea />
+      
       <>
       <div className="main-content-wrapper">
         <div className="container">
@@ -57,7 +60,7 @@ const HomePage = () => {
               </h2>
               <div className="masonry-filter-menu text-center">
                 <button className="viewAll ms-0" data-filter="*">
-                  View all
+                  <a href="/all-products">View all</a>
                 </button>
               </div>
             </div>
@@ -86,6 +89,7 @@ const HomePage = () => {
 
                       <div className="product-item-info bg-white">
                         <h5 className="product-item-title">{products.name}</h5>
+                        <h5 className="product-item-brand">{products.brand}</h5>
                         <div className="product-item-price">
                           <p>&#8358;{products.price.toLocaleString()}</p>
 

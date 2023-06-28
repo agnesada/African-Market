@@ -67,6 +67,7 @@ input::placeholder {
   padding-bottom: 10px;
   width: 100%;
   font-size: 16px;
+  margin-top: 32px;
 }
 
 .onboardOption {
