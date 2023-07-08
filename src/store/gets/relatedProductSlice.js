@@ -35,7 +35,7 @@ export const relatedProduct = (id) => async(dispatch) => {
 
     const {data} = await axios.get(`http://localhost:5000/api/products/${id}/related-products`)
 
-    dispatch(relatedProductSuccess(data.products))
+    dispatch(relatedProductSuccess(data.actual))
     
   } catch (err) {
     const message = err.response && err.response.data.message ? err.response.data.message : err.message

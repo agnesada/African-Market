@@ -36,44 +36,20 @@ function NavHeader() {
               id="collasible-nav-dropdown"
             >
               <NavDropdown.Item className="dropdownText" href="#action/3.1">
-                Body Care
+                Cereals
               </NavDropdown.Item>
               <NavDropdown.Item className="dropdownText" href="#action/3.2">
-                Drinks
+                Soft Drinks
               </NavDropdown.Item>
               <NavDropdown.Item className="dropdownText" href="#action/3.3">
-                Etnnic Delicasies
+              Seafood
               </NavDropdown.Item>
               {/* <NavDropdown.Divider /> */}
               <NavDropdown.Item className="dropdownText" href="#action/3.4">
-                Fish & Seafoods
+              Meat
               </NavDropdown.Item>
               <NavDropdown.Item className="dropdownText" href="#action/3.4">
-                Etnnic Delicasies
-              </NavDropdown.Item>
-              <NavDropdown.Item className="dropdownText" href="#action/3.4">
-                Flour
-              </NavDropdown.Item>
-              <NavDropdown.Item className="dropdownText" href="#action/3.4">
-                Fresh Produce
-              </NavDropdown.Item>
-              <NavDropdown.Item className="dropdownText" href="#action/3.4">
-                Fruits & Vegetables
-              </NavDropdown.Item>
-              <NavDropdown.Item className="dropdownText" href="#action/3.4">
-                Grains
-              </NavDropdown.Item>
-              <NavDropdown.Item className="dropdownText" href="#action/3.4">
-                Household
-              </NavDropdown.Item>
-              <NavDropdown.Item className="dropdownText" href="#action/3.4">
-                Oil
-              </NavDropdown.Item>
-              <NavDropdown.Item className="dropdownText" href="#action/3.4">
-                Provisions
-              </NavDropdown.Item>
-              <NavDropdown.Item className="dropdownText" href="#action/3.4">
-                Spices
+              Groceries
               </NavDropdown.Item>
             </NavDropdown>
             <Form className="d-flex">

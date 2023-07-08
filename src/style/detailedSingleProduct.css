@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700&display=swap");
 
+
+
 .mt{
   margin-top: 100px;
 }
@@ -11,9 +13,17 @@
   padding: 0;
 }
 
-.bc-home{
-  font-size: 18px;
-  color: #667085 !important;
+.bc-all-products{
+  color: #101828 !important;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.bc-all-products{
+  font-size: 16px;
+  font-weight: 500;
+  color: #101828 !important;
 }
 
 .imgContainer {
@@ -34,11 +44,12 @@
   overflow: hidden;
   position: absolute;
   top: 50%;
-  width: 50%;
+  width: 80%;
   transform: translate(-50%, -50%) scale(1);
   transition: filter 400ms ease 0s, opacity 400ms ease 0s,
     transform 500ms ease 0s !important;
 }
+
 
 .product-item-title {
   font-size: 24px;
@@ -46,19 +57,20 @@
   color: #101828;
 }
 
-.description-text {
+.description-text{
   font-size: 16px;
   font-weight: 400;
   color: #667085;
 }
 
-.product-item-price {
+
+.product-item-price{
   font-size: 24px;
   font-weight: 600;
   color: #101828;
 }
 
-.product-description-header {
+.product-description-header, .product-item-brand{
   font-size: 18px;
   font-weight: 500;
   color: #101828;
@@ -87,4 +99,56 @@
   color: #101828;
   font-size: 32px;
   font-weight: 600;
+}
+
+.empty{
+  padding: 20px;
+  width: 100%;
+  justify-items: center;
+  text-align: center;
+}
+
+.emptyimg{
+  width: 30%;
+}
+
+.similar-products-title{
+  color: #101828;
+  font-size: 32px;
+  font-weight: 600;
+} 
+
+.imgDiv {
+  border-radius: 8px;
+  position: relative;
+  height: 0px;
+  padding-top: 100%;
+  overflow: hidden;
+  background: rgb(245, 245, 245);
+}
+
+.product-item-info {
+  padding-top: 20px;
+}
+
+.product-item-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #101828;
+}
+
+.product-item-brand{
+  font-size: 16px;
+  font-weight: 500;
+  color: #101828;
+}
+
+.relatedProduct-item-price {
+  font-size: 14px;
+  font-weight: 500;
+  color: #101828;
+}
+
+.content-area {
+  margin-bottom: 100px;
 }

@@ -61,6 +61,7 @@ const SignUpPAge = () => {
               className="input-height"
               placeholder="Enter your full name"
               value={name}
+              type="text"
               onChange={(event) => setName(event.target.value)}
             />
           </Form.Group>
@@ -85,14 +86,6 @@ const SignUpPAge = () => {
               onChange={(event) => setPassword(event.target.value)}
             />
           </Form.Group>
-          {/* <Form.Text
-            className="mb-4 sopportingText"
-            id="passwordHelpBlock"
-            muted
-          >
-            Your password must not be less than 6 characters, contain letters,
-            numbers, and special characters.
-          </Form.Text> */}
           {loading ? (
             <h4>Loading...</h4>
           ) : (
@@ -109,8 +102,7 @@ const SignUpPAge = () => {
               {" "}
               <Link to={`/login`} className="reg">
                 Login
-              </Link>
-              {" "}
+              </Link>{" "}
             </span>
           </h3>
         </div>

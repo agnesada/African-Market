@@ -1,24 +1,24 @@
 import {createSlice} from '@reduxjs/toolkit'
 import axios from 'axios'
-const categorySlice = createSlice({
-    name: 'category',
+const fetchCategorySlice = createSlice({
+    name: 'fetchCategory',
     initialState: {
         loading: false,
         data: null,
         error: null
     },
     reducers:{
-        categoryRequest: (state)=>{
+        fetchCategoryRequest: (state)=>{
             state.loading = true
             state.data = null
             state.error = null
         },
-        categorySuccess: (state, action) =>{
+        fetchCategorySuccess: (state, action) =>{
             state.loading = false
             state.data = action.payload
             state.error = null
         },
-        categoryFailure: (state, action)=>{
+        fetchCategoryFailure: (state, action)=>{
             state.loading = false
             state.data = null
             state.error = action.payload
@@ -26,21 +26,21 @@ const categorySlice = createSlice({
     }
 })
 
-export const {categoryRequest, categorySuccess, categoryFailure} = categorySlice.actions 
+export const {fetchCategoryRequest, fetchCategorySuccess, fetchCategoryFailure} = fetchCategorySlice.actions 
 
-export const category = (category) => async(dispatch) => {
+export const fetchCategory = () => async(dispatch) => {
     try{
-        dispatch(categoryRequest())
+        dispatch(fetchCategoryRequest())
 
-        const {data} = await axios.get(`http://localhost:5000/api/products/categories/${category}`)
+        const {data} = await axios.get(`http://localhost:5000/api/categories`)
 
-        dispatch(categorySuccess(data.products)) 
+        dispatch(fetchCategorySuccess(data.categories)) 
 
     }catch(err){
         const message = err.response && err.response.data.data.message ? err.response.data.message: err.message 
-        dispatch(categoryFailure(message))
+        dispatch(fetchCategoryFailure(message))
     }
 }
 
 
-export default categorySlice.reducer 
+export default fetchCategorySlice.reducer 

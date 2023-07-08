@@ -15,7 +15,7 @@ const AllProducts = () => {
     error: pError,
   } = useSelector((state) => state.fetchProduct);
 
-  const displayedProducts = pData?.slice(0, 16); // Display 8 products initially
+  const displayedProducts = pData?.slice(0, 16);
 
   useEffect(() => {
     dispatch(fetchProduct());
@@ -27,17 +27,18 @@ const AllProducts = () => {
       <div className="main-content-wrapper mt">
         <div className="container">
           {/* Beginning of Featured Products */}
-          <div className="content-area">
+          <div className="content-area allprod-mt">
             <div className=" product-area d-lg-flex align-items-center justify-content-between mb-6 mb-lg-8">
               <h2 className="featuredHearder text-center text-lg-start mt-n2 mb-5 mb-lg-0 ">
                 Featured Products
               </h2>
+              <div className="category-filter-menu text-center">
+                <CategoryComponent />
+              </div>
             </div>
 
-            <CategoryComponent />
-
             <div className="row ">
-              {ploading && <p>Loading...</p>}
+              {ploading && <p></p>}
               {pError && <p>{pError}</p>}
 
               {displayedProducts &&
@@ -134,7 +135,6 @@ const AllProducts = () => {
                   </div>
                 ))}
             </div>
-            
           </div>
           {/* End of Featured Products */}
         </div>

@@ -8,6 +8,7 @@ import loginReducer from "./auth/loginSlice";
 import registerReducer  from "./auth/signUpSlice";
 import newProductReducer  from "./gets/newProductSlice";
 import categoryReducer from "./gets/categorySlice";
+import fetchCategoryReducer from "./gets/fetchCategorySlice";
 
 const reducer = {
 	fetchProduct: fetchProductReducer,
@@ -16,7 +17,8 @@ const reducer = {
 	login: loginReducer,
 	register: registerReducer,
 	newProduct: newProductReducer,
-	category: categoryReducer
+	category: categoryReducer,
+	fetchCategory: fetchCategoryReducer
 
 };
 
